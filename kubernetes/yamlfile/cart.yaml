@@ -22,10 +22,10 @@ spec:
     spec:
       containers:
       - name: "cart"
-        image:  vignesh1592/ui:v2
+        image: vignesh1592/ui:v2
         imagePullPolicy: Always
         ports:
-        - containerPort:  1004
+        - containerPort: 1004
           name: "cart"
 ---
 apiVersion: v1
@@ -33,11 +33,3 @@ kind: Service
 metadata:
   name: "cart"
   namespace: ms
-spec:
-  selector:
-    app: "cart"
-  type: ClusterIP
-  ports:
-  - name: "cart"
-    port: 1004
-    targetPort: 1004
