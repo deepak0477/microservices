@@ -1,7 +1,7 @@
-FROM node:14
+FROM node:20
 COPY . /var/www
 WORKDIR /var/www
-RUN npm install
+#RUN npm install
 
 EXPOSE 1004
 
